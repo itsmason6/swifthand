@@ -1,0 +1,31 @@
+SWIFT HAND — new GitHub repo + new Railway project
+
+GitHub's website only lets you upload 100 files at once. That is why
+router.tsx kept going missing. This folder is ~40 files.
+
+1. github.com → New repository
+   - Name: swift-hand
+   - Public
+   - Do NOT add a README or .gitignore
+   - Create repository
+
+2. Click "uploading an existing file"
+
+3. Open THIS folder. Select ALL files inside it
+   (package.json, src.zip, public.zip, railway-build.mjs, …).
+   Drag them onto GitHub.
+   package.json must be at the repo ROOT — not inside another folder.
+
+4. Wait until the file list shows:
+   - package.json
+   - src.zip
+   - public.zip
+   - railway-build.mjs
+   Then Commit changes.
+
+5. railway.com → New Project → Deploy from GitHub repo → swift-hand
+   Leave Root Directory BLANK.
+   Build:  npm install --include=dev && npm run build:railway
+   Start:  node .output/server/index.mjs
+
+Do not upload node_modules. Delete the old Railway service; start a new one.
